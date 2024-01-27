@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-homepage-background bg-cover bg-no-repeat p-24 text-white">
@@ -15,9 +17,11 @@ export default function Home() {
       </p>
 
       {/* Find Parking Button */}
-      <button className="px-6 py-2 bg-blue-500 hover:bg-blue-700 rounded text-lg font-semibold transition duration-300">
-        Find Parking
-      </button>
+      <Link href="/chat">
+        <button className="px-6 py-2 bg-blue-500 hover:bg-blue-700 rounded text-lg font-semibold transition duration-300">
+          Find Parking
+        </button>
+      </Link>
       </div>
     </main>
   );
