@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Map from "./map/map";
 
 type ParkingSpaceData = {
   id: number;
@@ -39,11 +39,18 @@ const ParkingSpace: React.FC<ParkingSpaceProps> = ({ address, price, image }) =>
 const RentParking: React.FC = () => {
   return (
     <main className="flex min-h-screen flex-col items-start justify-start bg-homepage-background bg-cover bg-no-repeat p-24 text-black">
-      <section className="parking-spaces-display bg-white p-8 rounded-lg shadow-lg max-w-2xl text-left mb-8">
-        {parkingSpaces.map((space) => (
-          <ParkingSpace key={space.id} address={space.address} price={space.price} image={space.image} />
-        ))}
-      </section>
+      <div className="flex">
+        <section className="parking-spaces-display bg-white p-8 rounded-lg shadow-lg max-w-2xl text-left mb-8">
+          {parkingSpaces.map((space) => (
+            <ParkingSpace key={space.id} address={space.address} price={space.price} image={space.image} />
+          ))}
+        </section>
+
+        {/* Map section */}
+        <div className="map-container ml-8"> {/* Optionally add some margin-left */}
+          <Map />
+        </div>
+      </div>
     </main>
   );
 };
