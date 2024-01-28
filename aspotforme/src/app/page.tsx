@@ -28,10 +28,10 @@ export default function Home() {
       {/* Box for rental parking page */}
       <div className="bg-gray-300 p-8 rounded-lg shadow-lg max-w-2xl text-center mt-8">
       {/* Big White Letters */}
-      <h1 className="text-5xl mb-2 font-semibold text-center mb-7">Have a parking spot to rent?</h1>
+      <h1 className="text-5xl mb-2 font-semibold text-center mb-7">Want to rent a parking spot?</h1>
 
       <p className="text-lg mb-2 text-center">
-        We are here to help you rent out your parking spot! Please click the "Rent Parking" button and be ready to rent out that parking spot.
+        We are here to help get one! Please click the "Rent Parking" button and be ready to rent out that parking spot.
       </p>
 
       {/* Rent Parking Button */}

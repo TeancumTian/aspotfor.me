@@ -1,5 +1,6 @@
 import React from "react";
 import Map from "./map/map";
+import Link from "next/link";
 
 type ParkingSpaceData = {
   id: number;
@@ -29,9 +30,11 @@ const ParkingSpace: React.FC<ParkingSpaceProps> = ({ address, price, image }) =>
         <h3>{address}</h3>
         <p>{price}</p>
       </div>
-        <button className="px-6 py-2 bg-blue-500 hover:bg-blue-700 rounded text-lg font-semibold transition duration-300 text-white mb-10">
-          Purchase
-        </button>
+        <Link href="/confirmation">
+          <button className="px-6 py-2 bg-blue-500 hover:bg-blue-700 rounded text-lg font-semibold transition duration-300 text-white mb-10">
+            Purchase
+          </button>
+        </Link>
     </div>
   );
 };
